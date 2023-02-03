@@ -1,0 +1,666 @@
+<html>
+<head>
+</head>
+<body>
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color:#000000;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+.footer{
+	height:200px;
+	width:100%;
+	border: solid black 0.9px;
+	color:white;
+	background-color: #212F3C ;  /* fallback for old browsers */
+}
+
+.contentf{
+	margin:25px 40px;
+	color:white;
+}
+
+.footerlogo{
+	margin:30px 50px;
+}
+
+<! slideshow>
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  width: 600px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 10px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+.hover-item {
+  transition: 0.3s;
+}
+.hover-item:hover {
+  transform: translate(0, -5px);
+}
+
+
+
+
+
+
+.rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 8px; 
+  width: 200px;
+  height: 5px;  
+}
+
+.rcorners3 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 8px; 
+  width: 200px;
+  height: 5px;  
+}
+
+.rcorners4 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 8px; 
+  width: 200px;
+  height: 5px;  
+}
+
+.rcorners5 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 8px; 
+  width: 200px;
+  height: 5px;  
+}
+
+.rcorners6 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 8px; 
+  width: 200px;
+  height: 5px;  
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 12.5px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 12.5px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: absolute;
+  display: flex;
+}
+
+.searchTerm {
+  width: 50%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 15px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 30px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 1.3%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+.socialicon{
+	margin: 20px;
+}
+
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+#icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-110%);
+  -ms-transform: translateY(-110%);
+  transform: translateY(-110%);
+}
+
+#icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 4px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+#icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switchposition{
+	margin: 8px;
+}
+
+
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.fontsize{
+font-size:25px;
+}
+</style>
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Category 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="">E-BOOKS</a>
+      <a href="#">Audio-books</a>
+      <a href="#">Your content</a>
+    </div>
+  </div> 
+  <a href="form 5.html">LOGIN</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  
+  
+  
+  <! dark theme toggle switch>
+  
+<label class="switch switchposition">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+
+<! dark theme toggle switch>
+
+
+
+  <div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="searching for?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+</div>
+
+
+<br>
+<br>
+<BR>
+<BR>
+<hr { display: block; margin-before: 0.5em; margin-after: 0.5em; margin-start: auto; margin-end: auto; overflow: hidden; border-style: inset; border-width: 1px;}>
+
+
+
+<P> <STRONG class="fontsize">Privacy Statement for Read it</STRONG><BR>
+<BR>
+This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from w3schools.com (the "Site").
+<BR>
+<BR>
+<hr { display: block; margin-before: 0.5em; margin-after: 0.5em; margin-start: auto; margin-end: auto; overflow: hidden; border-style: inset; border-width: 1px;}>
+
+<STRONG class="fontsize">Personal information we collect</STRONG><BR>
+<BR>
+<BR>
+When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically-collected information as "Device Information".
+<BR>
+<BR>
+<hr { display: block; margin-before: 0.5em; margin-after: 0.5em; margin-start: auto; margin-end: auto; overflow: hidden; border-style: inset; border-width: 1px;}>
+
+<STRONG class="fontsize">We collect Device Information using the following technologies:</STRONG><BR>
+<BR>
+"Cookies" are data files that are placed on your device or computer and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit http://www.allaboutcookies.org.
+"Log files", and User Accounts, track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.
+"Web beacons", "tags", and "pixels" are electronic files used to record information about how you browse the Site.
+Additionally when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information (including credit card numbers, email address, and phone number. We refer to this information as "Order Information".
+<BR>
+<BR>
+<hr { display: block; margin-before: 0.5em; margin-after: 0.5em; margin-start: auto; margin-end: auto; overflow: hidden; border-style: inset; border-width: 1px;}>
+
+<STRONG class="fontsize">Personal User Information</STRONG>
+<BR>
+<BR>
+When we talk about "Personal Information" in this Privacy Policy, we are talking both about Device Information and Order Information.
+
+How do we use your personal information?
+We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations). Additionally, we use this Order Information to:
+
+Communicate with you;
+Screen our orders for potential risk or fraud; and
+When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.
+We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).
+
+We use your account information that we collect generally to generate statistics for you, and provide personalized roadmaps. Additionally, we use this information to:
+
+Communicate with you;
+When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.
+<BR>
+<BR>
+<hr { display: block; margin-before: 0.5em; margin-after: 0.5em; margin-start: auto; margin-end: auto; overflow: hidden; border-style: inset; border-width: 1px;}>
+
+<STRONG class="fontsize">Sharing you personal Information</STRONG><BR>
+<BR>
+We share your Personal Information with third parties to help us use your Personal Information, as described above.
+
+For example, we use Google Analytics to help us understand how our customers use the Site -- you can read more about how Google uses your Personal Information here: https://www.google.com/intl/en/policies/privacy/. You can also opt-out of Google Analytics here: https://tools.google.com/dlpage/gaoptout.
+
+We also use Shopify to power our online store--you can read more about how Shopify uses your Personal Information here: https://www.shopify.com/legal/privacy.
+
+We fund our site by showing adverts as you browse our site. These adverts are usually managed by a partner specializing in providing adverts for multiple sites. Invariably these partners collect anonymous data about the websites you visits so they can personalize the adverts to you, ensure that you don't see the same adverts too frequently and ultimately report to advertisers on which adverts are working. We use a third-party to provide monetization technologies for our site. You can review their privacy and cookie policy here.
+
+Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.
+
+Behavioural advertising
+As described above, we use your Personal Information to provide you with targeted advertisements or marketing communications we believe may be of interest to you. For more information about how targeted advertising works, you can visit the Network Advertising Initiative's ("NAI") educational page at http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.
+
+You can opt out of targeted advertising by using the links below:
+
+- Facebook: https://www.facebook.com/settings/?tab=ads
+- Google: https://www.google.com/settings/ads/anonymous
+- Bing: https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads
+You can get a full list of the partners we use by accessing our ads.txt file.
+
+Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance's opt-out portal at: http://optout.aboutads.info/.
+
+You can learn more about online advertising, or opt-out of almost all advertising cookies at https://www.youronlinechoices.com.
+
+Note: Opting out will not disable ads, they will just no longer be tailored to you.
+
+Manage Consent
+If you want to change your choices regarding your personal information, you can use the button below:
+
+<hr { display: block; margin-before: 0.5em; margin-after: 0.5em; margin-start: auto; margin-end: auto; overflow: hidden; border-style: inset; border-width: 1px;}>
+
+  </P>
+  <DIV>
+  <footer class="footer">
+<div class="footerlogo hover-item"><a href="index.html"><img src="IMAGES\fter.png" alt="logo" /></a></div>
+<a class="contentf">&copy &reg FUTURE TECHNOLOGIES</a>
+<a  style="text-decoration:none" class="contentf rcorners2" href="about us.html" >About us</a>
+<a  style="text-decoration:none" class="contentf rcorners3" href="PRIVACY POLICY.html" > Privacy policy</a>
+<a  style="text-decoration:none" class="contentf rcorners4" href="">Careers</a>
+<a  style="text-decoration:none" class="contentf rcorners5" href="">Our vision</a>
+<a  style="text-decoration:none" class="contentf rcorners6" href="">Connect us</a><br>
+<a href="https://www.instagram.com/"><img class="socialicon" src="IMAGES\in.png"width="30px"height="30px"></img></a>
+<a href="#"><img class="socialicon" src="IMAGES\tw.png"width="30px"height="30px"></img></a>
+<a href="#"><img class="socialicon" src="IMAGES\fb.png"width="30px"height="30px"></img></a>
+<a href="#"><img class="socialicon" src="IMAGES\yt2.png"width="30px"height="30px"></img></a>
+</footer>
+  </DIV>
+</body>
+</html>
